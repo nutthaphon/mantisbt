@@ -1,5 +1,5 @@
 FROM php:5.6-apache
-MAINTAINER Nutthaphon Suwanwong <nutthaphon@gmail.com>
+LABEL maintainer="Nutthaphon Suwanwong <nutthaphon@gmail.com>"
 
 RUN a2enmod rewrite
 

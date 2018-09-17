@@ -1,8 +1,8 @@
 mantisbt:
   image: nutthaphon/mantis:latest
   volumes:
-    - /home/cloudman/Docker/mantis/html:/var/www/html
-    - /home/cloudman/Docker/mantis/php:/usr/local/etc/php
+    - /home/nutt/Docker/mantisbt/html:/var/www/html
+    - /home/nutt/Docker/mantisbt/php:/usr/local/etc/php
   ports:
     - "8989:80"
     - "8922:22"
@@ -20,6 +20,6 @@ mysql:
     - MYSQL_USER=mantisbt
     - MYSQL_PASSWORD=mantisbt
   volumes:
-    - '/home/cloudman/Docker/mantis/mysql:/var/lib/mysql'
-    - '/home/cloudman/Docker/mantis/mysql.conf/mysql:/etc/mysql'
+    - '/home/nutt/Docker/mantisbt/mysql:/var/lib/mysql'
+    - '/home/nutt/Docker/mantisbt/mysql.conf/mysql:/etc/mysql'
   restart: "no"

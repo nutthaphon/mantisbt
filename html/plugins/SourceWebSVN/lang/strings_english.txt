@@ -1,0 +1,22 @@
+<?php
+
+# Copyright (c) 2012 John Reese
+# Licensed under the MIT license
+
+$s_plugin_SourceWebSVN_ = '';
+$s_plugin_SourceWebSVN_websvn = 'WebSVN';
+$s_plugin_SourceWebSVN_title = 'Source Subversion / WebSVN Integration';
+$s_plugin_SourceWebSVN_description = 'Adds Subversion integration to the Source plugin framework using the WebSVN app.';
+
+$s_plugin_SourceWebSVN_websvn_url = 'WebSVN URL<br/><span class="small">(With trailing slash)</span>';
+$s_plugin_SourceWebSVN_websvn_multiviews = 'WebSVN Multiviews Mode<br/><span class="small" display>(Check if WebSVN runs under<br />&nbsp;Apache in Multiviews mode)</span>';
+$s_plugin_SourceWebSVN_websvn_name = 'WebSVN Name<br/><span class="small">(Repository directory)</span>';
+$s_plugin_SourceWebSVN_websvn_path = 'WebSVN Path<br/><span class="small">(From repository root)</span>';
+
+$s_plugin_SourceWebSVN_svn_username = 'WebSVN Username';
+$s_plugin_SourceWebSVN_svn_password = 'WebSVN Password';
+$s_plugin_SourceWebSVN_standard_repo = 'Standard Repository<br/><span class="small">(trunk/branches/tags)</span>';
+$s_plugin_SourceWebSVN_trunk_path = 'Trunk Path<br/><span class="small">(Non-standard repository)</span>';
+$s_plugin_SourceWebSVN_branch_path = 'Branch Path<br/><span class="small">(Non-standard repository)</span>';
+$s_plugin_SourceWebSVN_tag_path = 'Tag Path<br/><span class="small">(Non-standard repository)</span>';
+$s_plugin_SourceWebSVN_ignore_paths = 'Ignore Other Paths<br/><span class="small">(Non-standard repository)</span>';

@@ -23,10 +23,10 @@ ENV MANTIS_URL http://jaist.dl.sourceforge.net/project/mantisbt/mantis-stable/${
 ENV MANTIS_FILE mantisbt.tar.gz
 ENV MANTIS_TIMEZONE Asia/Bangkok
 
-COPY mantisbt-2.17.0.tar.gz ${MANTIS_FILE}
+#COPY mantisbt-2.17.0.tar.gz ${MANTIS_FILE}
 
 RUN set -xe \
-#&& curl -fSL ${MANTIS_URL} -o ${MANTIS_FILE} \
+&& curl -fSL ${MANTIS_URL} -o ${MANTIS_FILE} \
 && echo "${MANTIS_SHA1} ${MANTIS_FILE}" | sha1sum -c \
 && tar -xz --strip-components=1 -f ${MANTIS_FILE} \
 && rm ${MANTIS_FILE} \

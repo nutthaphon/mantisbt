@@ -84,6 +84,9 @@ $t_changesets = $t_vcs->commit( $t_repo, $f_data );
 # Changesets couldn't be loaded apparently
 if ( !is_array( $t_changesets ) ) {
 	die( plugin_lang_get( 'invalid_changeset' ) );
+} else {
+	$f_url = gpc_get_string( 'url' );
+	$t_changesets[0]->info = $f_url;
 }
 
 # No more changesets to checkin

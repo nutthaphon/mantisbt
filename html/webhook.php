@@ -16,7 +16,12 @@ $svninfo = json_decode($json_str);
 
 $ch = curl_init();
 
-$data = array('repo_name' => $svninfo->repository, 'data' => $svninfo->revision, 'api_key' => $mantisbt_key);
+$data = array(
+    'repo_name' => $svninfo->repository, 
+    'data'      => $svninfo->revision, 
+    'api_key'   => $mantisbt_key,
+    'url'       => $svninfo->revision_web
+);
 
 curl_setopt($ch, CURLOPT_URL, 'http://issues.ascii.in.th/plugin.php?page=Source/checkin');
 curl_setopt($ch, CURLOPT_POST, 1);

@@ -77,17 +77,11 @@ class SourceSVNPlugin extends MantisSourcePlugin {
 
 	public function url_changeset( $p_repo, $p_changeset ) {}
 
-	public function url_file( $p_repo, $p_changeset, $p_file ) {}
-
-	public function url_diff( $p_repo, $p_changeset, $p_file ) {
-		//$t_root = $p_repo->info['hub_root'];
-		//$t_reponame = $p_repo->info['hub_reponame'];
-		//$t_ref = $p_changeset->revision;
-		//$t_filename = $p_file->filename;
-		//$results = print_r($p_repo, true); 
-		//echo '<script>console.log("'.$results.'")</script>';
-		//return "http://www.v-smart.com";
+	public function url_file( $p_repo, $p_changeset, $p_file ) {
+		return $p_changeset->info;
 	}
+
+	public function url_diff( $p_repo, $p_changeset, $p_file ) {}
 
 	public function update_repo_form( $p_repo ) {
 		$t_svn_username = isset( $p_repo->info['svn_username'] ) ? $p_repo->info['svn_username'] : '';

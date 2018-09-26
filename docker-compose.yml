@@ -1,14 +1,14 @@
 mantisbt:
-  image: nutthaphon/mantis:latest
+  image: nutthaphon/mantisbt
   volumes:
-    - /home/cloudman/Docker/mantis/html:/var/www/html
-    - /home/cloudman/Docker/mantis/php:/usr/local/etc/php
+    - /home/nc-user/Docker/mantisbt/html:/var/www/html
+    - /home/nc-user/Docker/mantisbt/php:/usr/local/etc/php
   ports:
-    - "8989:80"
+    - "80:80"
     - "8922:22"
   links:
     - mysql
-  restart: "no"
+  restart: "always"
 mysql:
   image: mariadb:latest
   ports:
@@ -20,6 +20,6 @@ mysql:
     - MYSQL_USER=mantisbt
     - MYSQL_PASSWORD=mantisbt
   volumes:
-    - '/home/cloudman/Docker/mantis/mysql:/var/lib/mysql'
-    - '/home/cloudman/Docker/mantis/mysql.conf/mysql:/etc/mysql'
-  restart: "no"
+    - '/home/nc-user/Docker/mantisbt/mysql:/var/lib/mysql'
+    - '/home/nc-user/Docker/mantisbt/mysql.conf.d:/etc/mysql'
+  restart: "always"
